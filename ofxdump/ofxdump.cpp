@@ -27,6 +27,8 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
+#include <cstring>
+#include <cstdlib>
 #include <iostream>
 #include <iomanip>
 #include <string>

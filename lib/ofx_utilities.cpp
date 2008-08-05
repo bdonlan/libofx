@@ -16,12 +16,14 @@
  *                                                                         *
  ***************************************************************************/
 #include <config.h>
+#include <cstdlib>
 #include <iostream>
 #include <assert.h>
 
 #include "ParserEventGeneratorKit.h"
 #include "SGMLApplication.h"
 #include <time.h>
+#include <ctime>
 #include <string>
 #include <locale.h>
 #include "messages.hh"

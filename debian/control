@@ -1,0 +1,35 @@
+Source: libofx
+Section: libs
+Priority: optional
+Maintainer: Thomas Bushnell, BSG <tb@debian.org>
+Standards-Version: 3.7.3
+Build-Depends: libosp-dev (>= 1.5.1.0-2.1), debhelper, gengetopt, curl, libcurl3-gnutls-dev, libxml++1.0-dev
+
+Package: libofx4
+Architecture: any
+Depends: ${shlibs:Depends}
+Suggests: ofx
+Description: library to support Open Financial Exchange
+ Open Financial Exchange is an open standard for exchanging financial
+ information. Using this library a program can enable support for
+ common financial transactions such as bill payment, accessing account
+ information and investment tracking.
+
+Package: libofx-dev
+Section: libdevel
+Conflicts: libofx1
+Architecture: any
+Depends: libofx4 (= ${binary:Version}), libc6-dev | libc-dev, libosp-dev
+Description: development package for libofx2c2a
+ This file provides header files and related support for developing
+ packages that use libofx2c2a.
+
+Package: ofx
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: libofx2 (<= 1:0.8.0-3), libofx1c2, libofx1
+Description: Open Financial Exchange programs
+ This package contains programs that implement a primitive interface for
+ exchanging financial information using Open Financial Exchange.  More
+ sophisticated access is normally done through programs using the libofx
+ library rather than with the programs here.  
