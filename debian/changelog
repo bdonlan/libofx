@@ -1,3 +1,9 @@
+libofx (1:0.9.4) unstable; urgency=low
+
+  * New upstream release
+
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:53:54 -0400
+
 libofx (1:0.9.0-3) unstable; urgency=low
 
   * lib/ofx_preproc.c (ofx_proc_file): Make iconv buffer twice as big in
