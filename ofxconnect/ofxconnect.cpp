@@ -31,7 +31,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstring>
 #include "libofx.h"
 #include <config.h>		/* Include config constants, e.g., VERSION TF */
 #include <stdio.h>

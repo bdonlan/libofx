@@ -1,6 +1,7 @@
 libofx (1:0.9.4) unstable; urgency=low
 
   * New upstream release
+  * Remove obsolete debian patches
 
  -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:53:54 -0400
 
