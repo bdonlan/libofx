@@ -1,9 +1,10 @@
 if BUILD_OFXCONNECT
-       MAYBE_OFXCONNECT = ofxconnect
+  MAYBE_OFXCONNECT = ofxconnect
 endif
+DIST_SUBDIRS = m4 inc dtd lib doc . ofx2qif ofxdump ofxconnect
 SUBDIRS = m4 inc dtd lib doc . ofx2qif ofxdump $(MAYBE_OFXCONNECT)
 
-docdir = ${prefix}/share/doc/libofx
+docdir = $(datadir)/doc/libofx
 
 doc_DATA = \
   AUTHORS \
@@ -19,6 +20,7 @@ EXTRA_DIST = \
   libofx.spec \
   libofx.pc \
   totest.txt \
+  libofx.lsm.in \
   libofx.lsm
 
 pkgconfigdir=$(libdir)/pkgconfig

@@ -37,6 +37,7 @@
 #include <cstring>
 #include <vector>
 #include <algorithm>
+#include <string.h>
 
 using std::string;
 using std::vector;
