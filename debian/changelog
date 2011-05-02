@@ -4,8 +4,9 @@ libofx (1:0.9.4) unstable; urgency=low
   * Remove obsolete debian patches
   * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
   * Add new help2man dependency
+  * Add ${misc:Depends} entries to binary dependencies
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:53:54 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:56:03 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
