@@ -15,8 +15,10 @@ libofx (1:0.9.4) unstable; urgency=low
     common-licenses
   * Update to Standards-Version: 3.9.2.0
     * Added Homepage: field to control file
+  * Unversion ofx's conflict with libofx2; it's been long enough that only
+    libofx4 should be in the wild. 
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:05:02 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:22:38 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
