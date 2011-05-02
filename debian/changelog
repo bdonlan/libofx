@@ -6,8 +6,11 @@ libofx (1:0.9.4) unstable; urgency=low
   * Add new help2man dependency
   * Add ${misc:Depends} entries to binary dependencies
   * Add debian/watch file
+  * Back up manpages prior to build, as the upstream makefiles regenerate
+    them, adding noise to the diffs
+  * Don't ignore make clean failures
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:58:58 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:59:57 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 

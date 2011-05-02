@@ -15,6 +15,13 @@ MAKEVARS=LIBOFX_DTD_DIR=/usr/share/$(PACKNAME)/$(version)/dtd
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+
+    # Back up manpages, as the build process overwrites the copy in the
+	# source tarball. We'll put these back in the clean step in order to
+	# keep the debdiffs clean
+	[ -d debian/manbackup ] || (mkdir -p debian/manbackup; \
+		cp ofxdump/ofxdump.1 ofxconnect/ofxconnect.1 debian/manbackup)
+
 	# Add here commands to configure the package.
 	# automake
 	# autoconf
@@ -35,10 +42,14 @@ clean:
 	dh_testdir
 	dh_testroot
 
-	# Add here commands to clean up after the build process.
-	-$(MAKE) $(MAKEVARS) clean
-	-$(MAKE) $(MAKEVARS) distclean
+	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) clean
+	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) distclean
 	rm -f build-stamp configure-stamp config.cache config.log config.status doc/g-wrap.info
+
+	# Restore backed-up manpages
+	-cp debian/manbackup/ofxdump.1 ofxdump/ofxdump.1 -f
+	-cp debian/manbackup/ofxconnect.1 ofxconnect/ofxconnect.1 -f
+	rm -rf debian/manbackup
 
 	dh_clean
 
