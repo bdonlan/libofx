@@ -1,4 +1,4 @@
-# $Id: os.m4,v 1.1 2007/10/27 11:28:08 aquamaniac Exp $
+# $Id: os.m4,v 1.1 2007-10-27 11:28:08 aquamaniac Exp $
 # (c) 2002 Martin Preuss<martin@libchipcard.de>
 # These functions guess your operation system
 

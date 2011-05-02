@@ -36,7 +36,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <cstring>
+#include <cstdlib>
+#include <string.h>
 #ifdef HAVE_LIBCURL
 #include <curl/curl.h>
 #endif
