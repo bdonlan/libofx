@@ -5,8 +5,9 @@ libofx (1:0.9.4) unstable; urgency=low
   * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
   * Add new help2man dependency
   * Add ${misc:Depends} entries to binary dependencies
+  * Add debian/watch file
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:56:03 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:58:58 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
