@@ -1,4 +1,4 @@
-libofx (1:0.9.4) unstable; urgency=low
+libofx (1:0.9.4-1) unstable; urgency=low
 
   * New upstream release
   * Remove obsolete debian patches
@@ -19,7 +19,7 @@ libofx (1:0.9.4) unstable; urgency=low
     libofx4 should be in the wild. 
   * Update libofx-dev description 
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:26:34 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:33:18 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
