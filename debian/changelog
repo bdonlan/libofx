@@ -11,8 +11,12 @@ libofx (1:0.9.4) unstable; urgency=low
   * Don't ignore make clean failures
   * Update debhelper compatibility level to 5
   * Add versioned dependency on debhelper
+  * Update debian/copyright to specifically reference GPL-2 rather than GPL in
+    common-licenses
+  * Update to Standards-Version: 3.9.2.0
+    * Added Homepage: field to control file
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:00:31 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:05:02 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
