@@ -2,6 +2,8 @@ libofx (1:0.9.4) unstable; urgency=low
 
   * New upstream release
   * Remove obsolete debian patches
+  * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
+  * Add new help2man dependency
 
  -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:53:54 -0400
 
