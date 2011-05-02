@@ -19,8 +19,10 @@ libofx (1:0.9.4-1) unstable; urgency=low
     libofx4 should be in the wild. 
   * Update libofx-dev description 
   * Switch to 3.0 (quilt) source format
+  * Use dh_installman to install manual pages 
+  * Add doc-base registration for libofx-dev HTML reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:38:06 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:44:32 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 

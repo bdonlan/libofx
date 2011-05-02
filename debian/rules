@@ -25,7 +25,7 @@ configure-stamp:
 	# Add here commands to configure the package.
 	# automake
 	# autoconf
-	./configure --prefix=/usr
+	LDFLAGS=-Wl,--as-needed ./configure --prefix=/usr
 
 	touch configure-stamp
 
@@ -73,7 +73,7 @@ binary-arch: build install
 
 	dh_installdocs 
 	dh_installexamples
-	dh_installmanpages
+	dh_installman
 	dh_installinfo
 
 	dh_movefiles -plibofx-dev \

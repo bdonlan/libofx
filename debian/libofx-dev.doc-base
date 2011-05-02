@@ -1,0 +1,9 @@
+Document: libofx-reference-manual
+Title: libofx reference manual
+Author: libofx maintainers
+Abstract: Auto-generated reference manual for libofx
+Section: Programming
+
+Format: HTML
+Files: /usr/share/doc/libofx-dev/html/*.html
+Index: /usr/share/doc/libofx-dev/html/index.html
