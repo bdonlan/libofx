@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Thomas Bushnell, BSG <tb@debian.org>
 Standards-Version: 3.7.3
-Build-Depends: libosp-dev (>= 1.5.1.0-2.1), debhelper, gengetopt, curl, libcurl3-gnutls-dev, libxml++2.6-dev, help2man
+Build-Depends: libosp-dev (>= 1.5.1.0-2.1), debhelper (>= 5), gengetopt, curl, libcurl3-gnutls-dev, libxml++2.6-dev, help2man
 
 Package: libofx4
 Architecture: any

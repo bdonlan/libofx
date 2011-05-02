@@ -9,8 +9,10 @@ libofx (1:0.9.4) unstable; urgency=low
   * Back up manpages prior to build, as the upstream makefiles regenerate
     them, adding noise to the diffs
   * Don't ignore make clean failures
+  * Update debhelper compatibility level to 5
+  * Add versioned dependency on debhelper
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 17:59:57 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:00:31 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
