@@ -1,0 +1,173 @@
+/* config.h.in.  Generated from configure.in by autoheader.  */
+
+/* if DLL is to be built */
+#undef BUILDING_DLL
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you have the <EventGenerator.h> header file. */
+#undef HAVE_EVENTGENERATOR_H
+
+/* Define to 1 if you have the <getopt.h> header file. */
+#undef HAVE_GETOPT_H
+
+/* Define to 1 if you have the `getopt_long' function. */
+#undef HAVE_GETOPT_LONG
+
+/* Defined if libxml++ is available */
+#undef HAVE_ICONV
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have a functional curl library. */
+#undef HAVE_LIBCURL
+
+/* Defined if libxml++ is available */
+#undef HAVE_LIBXMLPP
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <ParserEventGeneratorKit.h> header file. */
+#undef HAVE_PARSEREVENTGENERATORKIT_H
+
+/* Define to 1 if you have the <SGMLApplication.h> header file. */
+#undef HAVE_SGMLAPPLICATION_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Defined if libcurl supports AsynchDNS */
+#undef LIBCURL_FEATURE_ASYNCHDNS
+
+/* Defined if libcurl supports IPv6 */
+#undef LIBCURL_FEATURE_IPV6
+
+/* Defined if libcurl supports KRB4 */
+#undef LIBCURL_FEATURE_KRB4
+
+/* Defined if libcurl supports libz */
+#undef LIBCURL_FEATURE_LIBZ
+
+/* Defined if libcurl supports SSL */
+#undef LIBCURL_FEATURE_SSL
+
+/* Defined if libcurl supports DICT */
+#undef LIBCURL_PROTOCOL_DICT
+
+/* Defined if libcurl supports FILE */
+#undef LIBCURL_PROTOCOL_FILE
+
+/* Defined if libcurl supports FTP */
+#undef LIBCURL_PROTOCOL_FTP
+
+/* Defined if libcurl supports FTPS */
+#undef LIBCURL_PROTOCOL_FTPS
+
+/* Defined if libcurl supports GOPHER */
+#undef LIBCURL_PROTOCOL_GOPHER
+
+/* Defined if libcurl supports HTTP */
+#undef LIBCURL_PROTOCOL_HTTP
+
+/* Defined if libcurl supports HTTPS */
+#undef LIBCURL_PROTOCOL_HTTPS
+
+/* Defined if libcurl supports LDAP */
+#undef LIBCURL_PROTOCOL_LDAP
+
+/* Defined if libcurl supports TELNET */
+#undef LIBCURL_PROTOCOL_TELNET
+
+/* if BeOS is used */
+#undef OS_BEOS
+
+/* if Apple Darwin is used */
+#undef OS_DARWIN
+
+/* if FreeBSD is used */
+#undef OS_FREEBSD
+
+/* if linux is used */
+#undef OS_LINUX
+
+/* host system */
+#undef OS_NAME
+
+/* if NetBSD is used */
+#undef OS_NETBSD
+
+/* if OpenBSD is used */
+#undef OS_OPENBSD
+
+/* if PalmOS is used */
+#undef OS_PALMOS
+
+/* if this is a POSIX system */
+#undef OS_POSIX
+
+/* host system */
+#undef OS_SHORTNAME
+
+/* if Solaris is used */
+#undef OS_SOLARIS
+
+/* system type */
+#undef OS_TYPE
+
+/* if WIN32 is used */
+#undef OS_WIN32
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* SP_MULTI_BYTE value from when OpenSP was compiled */
+#undef SP_MULTI_BYTE
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION
+
+/* Define to 1 if your processor stores words with the most significant byte
+   first (like Motorola and SPARC, unlike Intel and VAX). */
+#undef WORDS_BIGENDIAN
+
+/* Define curl_free() as free() if our version of curl lacks curl_free. */
+#undef curl_free
