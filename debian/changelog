@@ -18,8 +18,9 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * Unversion ofx's conflict with libofx2; it's been long enough that only
     libofx4 should be in the wild. 
   * Update libofx-dev description 
+  * Switch to 3.0 (quilt) source format
 
- -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:33:18 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Mon, 02 May 2011 18:38:06 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
