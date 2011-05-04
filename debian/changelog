@@ -3,6 +3,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * New upstream release
   * Remove obsolete debian patches
   * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
+  * Build using libcurl4-gnutls-dev (Closes: #487255)
   * Add new help2man dependency
   * Add ${misc:Depends} entries to binary dependencies
   * Add debian/watch file
