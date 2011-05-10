@@ -23,8 +23,10 @@ libofx (1:0.9.4-0.1) unstable; urgency=low
   * Switch to 3.0 (quilt) source format
   * Use dh_installman to install manual pages 
   * Add doc-base registration for libofx-dev HTML reference docs
+  * debian/patches/0001-Suppress-help2man-info-page-reference.patch:
+    Suppress reference to nonexistent info page in generated manpages 
 
- -- Bryan Donlan <bdonlan@gmail.com>  Tue, 03 May 2011 21:33:29 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Tue, 10 May 2011 16:16:26 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
