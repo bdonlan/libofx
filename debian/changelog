@@ -23,7 +23,10 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * Add debian/watch file
   * debian/rules:
     * Back up generated files during the build, in order to minimize noise in
-      debdiffs.
+      debdiffs. In order to ensure these files are regenerated, debian/rules
+      will delete the upstream-supplied versions after the backup.
+    * Regenerate aclocal/automake/autoheader/autoconf generated files. This is
+      required for the 0001-Suppress-help2man-info-page-reference patch
     * Don't ignore make clean failures
     * Use dh_installman to install manual pages
   * New patches:
@@ -37,7 +40,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:20:44 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:42:37 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
