@@ -25,8 +25,9 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * Back up generated files during the build, in order to minimize noise in
       debdiffs. In order to ensure these files are regenerated, debian/rules
       will delete the upstream-supplied versions after the backup.
-    * Regenerate libtoolize/aclocal/automake/autoheader/autoconf generated files.
-      This is required for the 0001-Suppress-help2man-info-page-reference patch
+    * Regenerate libtoolize/aclocal/automake/autoheader/autoconf generated
+      files. This is required for the
+      0001-Suppress-help2man-info-page-reference patch
     * Use the copy of libcurl.m4 in aclocal; this suppresses an autoconf
       warning
     * Use dh_auto_clean to clean up built files
