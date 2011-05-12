@@ -5,20 +5,24 @@ libofx (1:0.9.4-1) unstable; urgency=low
     mail.
   * New upstream release (Closes: #549161, #551057, #465281; also closes ubuntu
     LP: #629996)
+  * The DTD installation path has changed to /usr/share/libotx4/libotx/dtd, to
+    simplify the build scripts. (This allows the path to be passed in once, at
+    configure time as --datadir, rather than every time make is invoked)
   * Remove obsolete debian patches
+  * Switch to 3.0 (quilt) source format
   * debian/control:
-    * Switch to 3.0 (quilt) source format
     * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
     * Build using libcurl4-gnutls-dev (Closes: #487255)
-    * Add new help2man dependency
-    * Add ${misc:Depends} entries to binary dependencies
-    * Add versioned dependency on debhelper
+    * Add new help2man dependency for manpage generation
+    * Add ${misc:Depends} entries to binary dependencies (lintian fix)
+    * Add versioned dependency on debhelper >= 7.0.50, for autosequencer
+      support
     * Update to Standard-Version: 3.9.2.0 (added Homepage: field to
       debian/control)
     * Unversion ofx's conflict with libofx2; it's been long enough that only
       libofx4 should be in the wild.
     * Update libofx-dev description
-    * Add build-depends on automake (>= 1.11), as one of our debian patches
+    * Add build-depends on the autotools suite, as one of our debian patches
       modifies Makefile.am files
   * Add debian/watch file
   * debian/rules:
@@ -30,27 +34,34 @@ libofx (1:0.9.4-1) unstable; urgency=low
       0001-Suppress-help2man-info-page-reference patch
     * Use the copy of libcurl.m4 in aclocal; this suppresses an autoconf
       warning
-    * Use dh_auto_clean to clean up built files
-    * Use dh_installman to install manual pages
-    * Remove no longer needed call to delete CVS metadata
+  * Use the dh autosequencer to perform the build.
+    * debian/rules: Use dh(1) for most actions.
+    * debian/libofx4.install, debian/libofx-dev.install, debian/ofx.install:
+      Add install files so we can use dh_install rather than manual
+      dh_movefiles invocations
+    * debian/libofx-dev.docs: Install HTML docs and sample files via
+      dh_installdocs
+    * debian/dirs: Removed as unnecessary
+    * debian/compat: Update debhelper compatibility level to 7, now that
+      we're using the autosequencer
   * New patches:
     * 0001-Suppress-help2man-info-page-reference.patch:
       Suppress reference to nonexistent info page in generated manpages
     * 0002-Fix-formatting-of-ofxdump-usage-message-so-help2man-.patch:
-      Fix leading spaces in ofxdump --help output confusing help2man
+      Fix leading spaces in ofxdump --help output confusing help2man and
+      breaking the ofxdump(1) manpage
     * 0003-Fix-autoconf-warning-due-to-bad-libtool-invoca.patch:
       Fix bad invocation of libtool in configure.in breaking the build with
       autoconf >= 2.68
     * 0004-Reference-the-m4-directory-for-macro-files.patch:
       Add references to the m4 directory in configure.in and Makefile.am so
       libtoolize can do its magic
-  * debian/compat: Update debhelper compatibility level to 5
   * debian/copyright: Specifically reference GPL-2 rather than GPL in
-    common-licenses
-  * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
+    common-licenses (lintian fix)
+  * debian/libofx-dev.doc-base: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 10:17:30 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 18:34:06 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
