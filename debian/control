@@ -1,7 +1,7 @@
 Source: libofx
 Section: libs
 Priority: optional
-Maintainer: Thomas Bushnell, BSG <tb@debian.org>
+Maintainer: Bryan Donlan <bdonlan@gmail.com>
 Standards-Version: 3.9.2.0
 Homepage: http://libofx.sourceforge.net/
 Build-Depends: libosp-dev (>= 1.5.1.0-2.1), debhelper (>= 5), gengetopt, curl, libcurl4-gnutls-dev, libxml++2.6-dev, help2man

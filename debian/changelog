@@ -1,34 +1,41 @@
-libofx (1:0.9.4-0.1) unstable; urgency=low
+libofx (1:0.9.4-1) unstable; urgency=low
 
-  * Non-maintainer upload.
-  * New upstream release (Closes: #549161, #551057)
+  * Set myself as maintainer, with blessing of previous maintainer Thomas
+    Bushnell on debian-mentors and gnucash maintainer Micha Lenk in private
+    mail.
+  * New upstream release (Closes: #549161, #551057; also closes ubuntu
+    LP: #629996)
   * Remove obsolete debian patches
-  * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
-  * Build using libcurl4-gnutls-dev (Closes: #487255)
-  * Add new help2man dependency
-  * Add ${misc:Depends} entries to binary dependencies
+  * debian/control:
+    * Switch to 3.0 (quilt) source format
+    * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
+    * Build using libcurl4-gnutls-dev (Closes: #487255)
+    * Add new help2man dependency
+    * Add ${misc:Depends} entries to binary dependencies
+    * Add versioned dependency on debhelper
+    * Update to Standard-Version: 3.9.2.0 (added Homepage: field to
+      debian/control)
+    * Unversion ofx's conflict with libofx2; it's been long enough that only
+      libofx4 should be in the wild.
+    * Update libofx-dev description
   * Add debian/watch file
-  * Back up generated files during the build, in order to minimize noise in
-    debdiffs.
-  * Don't ignore make clean failures
-  * Update debhelper compatibility level to 5
-  * Add versioned dependency on debhelper
-  * Update debian/copyright to specifically reference GPL-2 rather than GPL in
+  * debian/rules:
+    * Back up generated files during the build, in order to minimize noise in
+      debdiffs.
+    * Don't ignore make clean failures
+    * Use dh_installman to install manual pages
+  * New patches:
+    * 0001-Suppress-help2man-info-page-reference.patch:
+      Suppress reference to nonexistent info page in generated manpages
+    * 0002-Fix-formatting-of-ofxdump-usage-message-so-help2man-.patch:
+      Fix leading spaces in ofxdump --help output confusing help2man
+  * debian/compat: Update debhelper compatibility level to 5
+  * debian/copyright: Specifically reference GPL-2 rather than GPL in
     common-licenses
-  * Update to Standards-Version: 3.9.2.0
-    * Added Homepage: field to control file
-  * Unversion ofx's conflict with libofx2; it's been long enough that only
-    libofx4 should be in the wild. 
-  * Update libofx-dev description 
-  * Switch to 3.0 (quilt) source format
-  * Use dh_installman to install manual pages 
-  * Add doc-base registration for libofx-dev HTML reference docs
-  * debian/patches/0001-Suppress-help2man-info-page-reference.patch:
-    Suppress reference to nonexistent info page in generated manpages 
-  * 0002-Fix-formatting-of-ofxdump-usage-message-so-help2man-.patch:
-    Fix leading spaces in ofxdump --help output confusing help2man
+  * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
+    reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Tue, 10 May 2011 16:56:39 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 22:28:02 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
