@@ -78,9 +78,8 @@ do-clean:
 	dh_testdir
 	dh_testroot
 
-	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) clean
-	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) distclean
-	rm -f build-stamp configure-stamp config.cache config.log config.status doc/g-wrap.info
+	dh_auto_clean
+	rm -f build-stamp configure-stamp
 	rm -f m4/lt*.m4
 
 	dh_clean
@@ -117,7 +116,6 @@ binary-arch: build install
 		usr/lib/pkgconfig
 	cp -rp doc/html debian/libofx-dev/usr/share/doc/libofx-dev
 	cp -rp doc/ofx_sample_files debian/libofx-dev/usr/share/doc/libofx-dev
-	-rm -rf debian/libofx-dev/usr/share/doc/libofx-dev/ofx_sample_files/CVS
 
 	dh_movefiles -pofx \
 		usr/bin
