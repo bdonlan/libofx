@@ -5,12 +5,15 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-# shared library versions, option 1
-version=0.9.0
-
 # Name of the shared library package
 PACKNAME=libofx4
-MAKEVARS=LIBOFX_DTD_DIR=/usr/share/$(PACKNAME)/$(version)/dtd
+
+# Allow our shared data (DTDs, etc) to coexist among multiple installations
+# of different soname revisions of the same library
+CONFIG_VARS=--datadir=/usr/share/$(PACKNAME) LDFLAGS=-Wl,--as-needed
+
+%:
+	dh $@
 
 ## Back up generated files to keep the debdiffs clean
 BACKUP_FILES= \
@@ -41,98 +44,35 @@ backup-stamp:
 		mv $$file debian/backup/$$file; \
 	done
 	touch backup-stamp
+	
+override_dh_auto_configure: backup-stamp
+	## Update libcurl.m4 to suppress autoconf warning
+	ln -sf /usr/share/aclocal/libcurl.m4 libcurl.m4
+	## Apply our Makefile.am changes
+	autoreconf -i -v -s
+	dh_auto_configure -- $(CONFIG_VARS)
 
-restore:
+
+## Upstream ships some javascript files in their HTML docs, make sure it's
+## not compressed as this will break the references from the HTML
+override_dh_compress:
+	dh_compress -X.js
+
+
+## Restore backed-up files on clean
+override_dh_clean:
+	dh_clean
+	
 	for file in $(shell find debian/backup -type f | sed 's|^debian/backup/||'); do \
 		cp debian/backup/$$file $$file -fv; \
 	done
 	rm -f backup-stamp
 	rm -rf debian/backup
-
-
-configure: configure-stamp
-configure-stamp: backup-stamp
-	dh_testdir
-
-	# Add here commands to configure the package.
-	ln -sf /usr/share/aclocal/libcurl.m4 libcurl.m4
-	autoreconf -v -i -s
-	LDFLAGS=-Wl,--as-needed ./configure --prefix=/usr
-
-	touch configure-stamp
-
-build: build-stamp
-build-stamp: configure-stamp
-	dh_testdir
-
-	# Add here commands to compile the package.
-	$(MAKE) $(MAKEVARS)
-
-	touch build-stamp
-
-do-clean:
-	dh_testdir
-	dh_testroot
-
-	dh_auto_clean
-	rm -f build-stamp configure-stamp
 	rm -f m4/lt*.m4
 
-	dh_clean
-clean: do-clean restore
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_clean -k
-	dh_installdirs
-
-	$(MAKE) $(MAKEVARS) install DESTDIR=`pwd`/debian/tmp
-
-# Build architecture-independent files here.
-binary-indep: build install
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: build install
-#	dh_testversion
-	dh_testdir
-	dh_testroot
-
-	dh_installdocs 
-	dh_installexamples
-	dh_installman
-	dh_installinfo
-
-	dh_movefiles -plibofx-dev \
-		usr/lib/libofx.a \
-		usr/lib/libofx.la \
-		usr/lib/libofx.so \
-		usr/include \
-		usr/lib/pkgconfig
-	cp -rp doc/html debian/libofx-dev/usr/share/doc/libofx-dev
-	cp -rp doc/ofx_sample_files debian/libofx-dev/usr/share/doc/libofx-dev
-
-	dh_movefiles -pofx \
-		usr/bin
-
-	dh_movefiles -p$(PACKNAME) \
-		usr/share/$(PACKNAME)/$(version)/dtd \
-		usr/lib
-	-rmdir debian/$(PACKNAME)/usr/include
-
-#	dh_undocumented
+# For some reason, dh_installchangelogs doesn't notice the upstream changelog
+# without this hint
+override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_makeshlibs
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install backup restore
+.PHONY: backup
