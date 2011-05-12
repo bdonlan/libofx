@@ -7,7 +7,7 @@ Subject: [PATCH] Fix formatting of ofxdump usage message so help2man output is w
  1 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/ofxdump/cmdline.ggo b/ofxdump/cmdline.ggo
-index 52fba2e..7911a88 100644
+index 52fba2e..9ba7e07 100644
 --- a/ofxdump/cmdline.ggo
 +++ b/ofxdump/cmdline.ggo
 @@ -3,9 +3,9 @@
@@ -17,7 +17,7 @@ index 52fba2e..7911a88 100644
 - understands about a particular file or response, and sends errors to 
 - stderr.  To know exactly what the library understands about of a particular
 - ofx response file, just call ofxdump on that file."
-+understands about a particular file or response, and sends errors to 
++understands about a particular file or response, and sends errors to
 +stderr.  To know exactly what the library understands about of a particular
 +ofx response file, just call ofxdump on that file."
  
