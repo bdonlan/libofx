@@ -29,8 +29,9 @@ libofx (1:0.9.4-1) unstable; urgency=low
       This is required for the 0001-Suppress-help2man-info-page-reference patch
     * Use the copy of libcurl.m4 in aclocal; this suppresses an autoconf
       warning
-    * Don't ignore make clean failures
+    * Use dh_auto_clean to clean up built files
     * Use dh_installman to install manual pages
+    * Remove no longer needed call to delete CVS metadata
   * New patches:
     * 0001-Suppress-help2man-info-page-reference.patch:
       Suppress reference to nonexistent info page in generated manpages
@@ -48,7 +49,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 00:15:23 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 10:17:30 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
