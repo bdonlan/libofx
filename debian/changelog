@@ -18,6 +18,8 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * Unversion ofx's conflict with libofx2; it's been long enough that only
       libofx4 should be in the wild.
     * Update libofx-dev description
+    * Add build-depends on automake (>= 1.11), as one of our debian patches
+      modifies Makefile.am files
   * Add debian/watch file
   * debian/rules:
     * Back up generated files during the build, in order to minimize noise in
@@ -35,7 +37,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 22:35:23 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:20:44 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 

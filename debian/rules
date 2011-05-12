@@ -13,41 +13,56 @@ PACKNAME=libofx4
 MAKEVARS=LIBOFX_DTD_DIR=/usr/share/$(PACKNAME)/$(version)/dtd
 
 ## Back up generated files to keep the debdiffs clean
-BACKUP_FILES=ofxdump/ofxdump.1 ofxdump/cmdline.c ofxconnect/ofxconnect.1 libofx.pc
+BACKUP_FILES= \
+	ofxdump/ofxdump.1 \
+	ofxdump/cmdline.c \
+	ofxconnect/ofxconnect.1 \
+	libofx.pc \
+	inc/libofx.h \
+	libofx.lsm \
+	libofx.pc \
+	libofx.spec \
+	ofxconnect/cmdline.c \
+	ofxconnect/cmdline.h \
+	ofxdump/cmdline.c \
+	ofxdump/cmdline.h \
+	aclocal.m4 \
+	configure \
+	config.h.in \
+	$(shell find . -name Makefile.in | grep -v debian/backup)
+
 backup: backup-stamp
 backup-stamp:
 	mkdir -p debian/backup
 	for file in $(BACKUP_FILES); do \
 		mkdir -p debian/backup/`dirname $$file`; \
-		cp $$file debian/backup/$$file; \
+		mv $$file debian/backup/$$file; \
 	done
 	touch backup-stamp
 
 restore:
-	for file in $(BACKUP_FILES); do \
-		if [ -f debian/backup/$$file ]; then cp debian/backup/$$file $$file -f; fi; \
+	for file in $(shell find debian/backup -type f | sed 's|^debian/backup/||'); do \
+		cp debian/backup/$$file $$file -fv; \
 	done
+	rm -f backup-stamp
+	rm -rf debian/backup
 
 
-configure: backup-stamp configure-stamp
-configure-stamp:
+configure: configure-stamp
+configure-stamp: backup-stamp
 	dh_testdir
 
-    # Back up manpages, as the build process overwrites the copy in the
-	# source tarball. We'll put these back in the clean step in order to
-	# keep the debdiffs clean
-	[ -d debian/manbackup ] || (mkdir -p debian/manbackup; \
-		cp ofxdump/ofxdump.1 ofxconnect/ofxconnect.1 debian/manbackup)
-
 	# Add here commands to configure the package.
-	# automake
-	# autoconf
+	aclocal
+	autoheader
+	automake
+	autoconf
 	LDFLAGS=-Wl,--as-needed ./configure --prefix=/usr
 
 	touch configure-stamp
 
-build: configure-stamp build-stamp
-build-stamp:
+build: build-stamp
+build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
