@@ -56,11 +56,7 @@ configure-stamp: backup-stamp
 
 	# Add here commands to configure the package.
 	ln -sf /usr/share/aclocal/libcurl.m4 libcurl.m4
-	libtoolize -f
-	aclocal
-	autoheader
-	automake
-	autoconf
+	autoreconf -v -i -s
 	LDFLAGS=-Wl,--as-needed ./configure --prefix=/usr
 
 	touch configure-stamp
