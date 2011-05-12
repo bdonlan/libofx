@@ -68,7 +68,7 @@ override_dh_clean:
 	done
 	rm -f backup-stamp
 	rm -rf debian/backup
-	rm -f m4/lt*.m4
+	rm -f m4/lt*.m4 m4/libtool.m4
 
 # For some reason, dh_installchangelogs doesn't notice the upstream changelog
 # without this hint
