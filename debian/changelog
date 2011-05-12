@@ -56,12 +56,15 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * 0004-Reference-the-m4-directory-for-macro-files.patch:
       Add references to the m4 directory in configure.in and Makefile.am so
       libtoolize can do its magic
+    * 0005-Improve-manpage-whatis-entries.patch: Replace the generic
+      'libofx - manual page for libofx 0.9.4' whatis entries in the ofxdump(1)
+      and ofxconnect(1) manpages with something more descriptive
   * debian/copyright: Specifically reference GPL-2 rather than GPL in
     common-licenses (lintian fix)
   * debian/libofx-dev.doc-base: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 18:34:06 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 19:00:06 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
