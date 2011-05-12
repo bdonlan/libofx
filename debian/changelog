@@ -3,7 +3,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * Set myself as maintainer, with blessing of previous maintainer Thomas
     Bushnell on debian-mentors and gnucash maintainer Micha Lenk in private
     mail.
-  * New upstream release (Closes: #549161, #551057; also closes ubuntu
+  * New upstream release (Closes: #549161, #551057, #465281; also closes ubuntu
     LP: #629996)
   * Remove obsolete debian patches
   * debian/control:
@@ -35,7 +35,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 22:28:02 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 22:35:23 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
