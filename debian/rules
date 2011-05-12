@@ -29,6 +29,8 @@ BACKUP_FILES= \
 	aclocal.m4 \
 	configure \
 	config.h.in \
+	config/ltmain.sh \
+	libcurl.m4 \
 	$(shell find . -name Makefile.in | grep -v debian/backup)
 
 backup: backup-stamp
@@ -53,6 +55,8 @@ configure-stamp: backup-stamp
 	dh_testdir
 
 	# Add here commands to configure the package.
+	ln -sf /usr/share/aclocal/libcurl.m4 libcurl.m4
+	libtoolize -f
 	aclocal
 	autoheader
 	automake
@@ -77,6 +81,7 @@ do-clean:
 	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) clean
 	[ ! -f Makefile ] || $(MAKE) $(MAKEVARS) distclean
 	rm -f build-stamp configure-stamp config.cache config.log config.status doc/g-wrap.info
+	rm -f m4/lt*.m4
 
 	dh_clean
 clean: do-clean restore

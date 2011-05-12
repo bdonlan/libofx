@@ -25,8 +25,10 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * Back up generated files during the build, in order to minimize noise in
       debdiffs. In order to ensure these files are regenerated, debian/rules
       will delete the upstream-supplied versions after the backup.
-    * Regenerate aclocal/automake/autoheader/autoconf generated files. This is
-      required for the 0001-Suppress-help2man-info-page-reference patch
+    * Regenerate libtoolize/aclocal/automake/autoheader/autoconf generated files.
+      This is required for the 0001-Suppress-help2man-info-page-reference patch
+    * Use the copy of libcurl.m4 in aclocal; this suppresses an autoconf
+      warning
     * Don't ignore make clean failures
     * Use dh_installman to install manual pages
   * New patches:
@@ -37,13 +39,16 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * 0003-Fix-autoconf-warning-due-to-bad-libtool-invoca.patch:
       Fix bad invocation of libtool in configure.in breaking the build with
       autoconf >= 2.68
+    * 0004-Reference-the-m4-directory-for-macro-files.patch:
+      Add references to the m4 directory in configure.in and Makefile.am so
+      libtoolize can do its magic
   * debian/compat: Update debhelper compatibility level to 5
   * debian/copyright: Specifically reference GPL-2 rather than GPL in
     common-licenses
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:54:54 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 00:15:23 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
