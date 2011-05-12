@@ -1,2 +1,3 @@
 0001-Suppress-help2man-info-page-reference.patch
 0002-Fix-formatting-of-ofxdump-usage-message-so-help2man-.patch
+0003-Fix-autoconf-error-due-to-bad-libtool-invocation-in-.patch

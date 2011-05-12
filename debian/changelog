@@ -34,13 +34,16 @@ libofx (1:0.9.4-1) unstable; urgency=low
       Suppress reference to nonexistent info page in generated manpages
     * 0002-Fix-formatting-of-ofxdump-usage-message-so-help2man-.patch:
       Fix leading spaces in ofxdump --help output confusing help2man
+    * 0003-Fix-autoconf-warning-due-to-bad-libtool-invoca.patch:
+      Fix bad invocation of libtool in configure.in breaking the build with
+      autoconf >= 2.68
   * debian/compat: Update debhelper compatibility level to 5
   * debian/copyright: Specifically reference GPL-2 rather than GPL in
     common-licenses
   * debian/libofx-dev.docs: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:42:37 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Wed, 11 May 2011 23:54:54 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
