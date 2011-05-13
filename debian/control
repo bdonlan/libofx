@@ -12,7 +12,7 @@ Package: libofx4
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: ofx
-Description: library to support Open Financial Exchange
+Description: library to support the Open Financial Exchange format
  Open Financial Exchange is an open standard for exchanging financial
  information. Using this library a program can enable support for
  common financial transactions such as bill payment, accessing account
@@ -33,6 +33,20 @@ Description: development package for libofx4
  information. Using this library a program can enable support for
  common financial transactions such as bill payment, accessing account
  information and investment tracking.
+
+Package: libofx4-dbg
+Section: libdevel
+Priority: extra
+Depends: libofx4 (= ${binary:Version})
+Architecture: any
+Recommends: libofx-dev
+Description: debugging symbols for libofx4
+ This package provides debugging symbols for debugging applications using
+ libofx4, a library to support the Open Financial Exchange format.
+ .
+ Open Financial Exchange is an open standard for exchanging financial
+ information. Using this library a program can enable support for
+ common financial transactions such as bill payment, accessing account
 
 Package: libofx-doc
 Section: doc

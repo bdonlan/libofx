@@ -24,6 +24,12 @@ libofx (1:0.9.4-1) unstable; urgency=low
     * Update libofx-dev description
     * Add build-depends on the autotools suite, as one of our debian patches
       modifies Makefile.am files
+  * Split documentation into a new libofx-doc package, to reduce the size of
+    libofx-dev.
+    * Additionally, all /usr/share/doc/* directories for this source package
+      are now linked into /usr/share/doc/libofx4. This ensures that users
+      expecting documentation to be in /usr/share/doc/libofx-dev will still
+      find it there.
   * Add debian/watch file
   * debian/rules:
     * Back up generated files during the build, in order to minimize noise in
@@ -64,7 +70,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
   * debian/libofx-dev.doc-base: Add doc-base registration for libofx-dev HTML
     reference docs
 
- -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 19:00:06 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 21:34:45 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 

@@ -79,4 +79,10 @@ override_dh_installchangelogs:
 override_dh_installdocs:
 	dh_installdocs --link-doc=libofx4
 
-.PHONY: backup
+# Generate a debug symbols package
+override_dh_strip:
+	dh_strip --dbg-package=libofx4-dbg
+
+.PHONY: backup override_dh_strip override_dh_installdocs \
+	override_dh_installchangelogs override_dh_clean override_dh_compress \
+	override_dh_auto_configure
