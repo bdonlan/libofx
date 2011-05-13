@@ -71,8 +71,12 @@ override_dh_clean:
 	rm -f m4/lt*.m4 m4/libtool.m4
 
 # For some reason, dh_installchangelogs doesn't notice the upstream changelog
-# without this hint
+# without this hint.
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
+
+# Install all docs to libofx4's directory, and symlink the other packages there
+override_dh_installdocs:
+	dh_installdocs --link-doc=libofx4
 
 .PHONY: backup

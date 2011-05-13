@@ -23,6 +23,7 @@ Section: libdevel
 Conflicts: libofx1
 Architecture: any
 Depends: libofx4 (= ${binary:Version}), libc6-dev | libc-dev, libosp-dev, ${misc:Depends}
+Suggests: libofx-doc
 Description: development package for libofx4
  This package provides header files and related support for developing
  packages that use libofx4, a library to support the Open Financial Exchange
@@ -33,9 +34,24 @@ Description: development package for libofx4
  common financial transactions such as bill payment, accessing account
  information and investment tracking.
 
+Package: libofx-doc
+Section: doc
+Priority: optional
+Depends: libofx4 (= ${binary:Version})
+Architecture: all
+Description: documentation for libofx4
+ This package provides HTML documentation and sample OFX files for developing
+ packages using libofx4, a library to support the Open Financial Exchange
+ format.
+ .
+ Open Financial Exchange is an open standard for exchanging financial
+ information. Using this library a program can enable support for
+ common financial transactions such as bill payment, accessing account
+ information and investment tracking.
+
 Package: ofx
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libofx4 (= ${binary:Version})
 Conflicts: libofx2, libofx1c2, libofx1, ${misc:Depends}
 Description: Open Financial Exchange programs
  This package contains programs that implement a primitive interface for
