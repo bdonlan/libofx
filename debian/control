@@ -50,7 +50,6 @@ Description: debugging symbols for libofx4
 
 Package: libofx-doc
 Section: doc
-Priority: optional
 Depends: libofx4, libjs-jquery
 Architecture: all
 Description: documentation for libofx4
