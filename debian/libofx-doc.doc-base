@@ -5,5 +5,5 @@ Abstract: Auto-generated reference manual for libofx
 Section: Programming
 
 Format: HTML
-Files: /usr/share/doc/libofx4/html/*.html
-Index: /usr/share/doc/libofx4/html/index.html
+Files: /usr/share/doc/libofx-doc/html/*.html
+Index: /usr/share/doc/libofx-doc/html/index.html

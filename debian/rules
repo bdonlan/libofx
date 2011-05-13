@@ -71,18 +71,15 @@ override_dh_clean:
 	rm -f m4/lt*.m4 m4/libtool.m4
 
 # For some reason, dh_installchangelogs doesn't notice the upstream changelog
-# without this hint.
+# without this hint. While we're at it, install NEWS, AUTHORS, README, and
+# totest.txt
 override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog
-
-# Install all docs to libofx4's directory, and symlink the other packages there
-override_dh_installdocs:
-	dh_installdocs --link-doc=libofx4
+	dh_installchangelogs ChangeLog NEWS AUTHORS README totest.txt
 
 # Generate a debug symbols package
 override_dh_strip:
 	dh_strip --dbg-package=libofx4-dbg
 
-.PHONY: backup override_dh_strip override_dh_installdocs \
+.PHONY: backup override_dh_strip \
 	override_dh_installchangelogs override_dh_clean override_dh_compress \
 	override_dh_auto_configure

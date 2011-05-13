@@ -10,7 +10,7 @@ libofx (1:0.9.4-1) unstable; urgency=low
     configure time as --datadir, rather than every time make is invoked)
   * Remove obsolete debian patches
   * Switch to 3.0 (quilt) source format
-  * debian/control:
+  * debian/control updates:
     * Change libxml dependency to libxml++2.6-dev (Closes: #467364)
     * Build using libcurl4-gnutls-dev (Closes: #487255)
     * Add new help2man dependency for manpage generation
@@ -26,12 +26,8 @@ libofx (1:0.9.4-1) unstable; urgency=low
       modifies Makefile.am files
   * Split documentation into a new libofx-doc package, to reduce the size of
     libofx-dev.
-    * Additionally, all /usr/share/doc/* directories for this source package
-      are now linked into /usr/share/doc/libofx4. This ensures that users
-      expecting documentation to be in /usr/share/doc/libofx-dev will still
-      find it there.
-    * debian/control, debian/libofx-doc.links: Symlink the jquery.js file from
-      libjs-jquery instead of shipping a new copy
+  * debian/control, debian/libofx-doc.links: Symlink the jquery.js file from
+    libjs-jquery instead of shipping a new copy
   * Add debian/watch file
   * debian/rules:
     * Back up generated files during the build, in order to minimize noise in
