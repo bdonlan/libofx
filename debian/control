@@ -37,7 +37,7 @@ Description: development package for libofx4
 Package: libofx4-dbg
 Section: debug
 Priority: extra
-Depends: libofx4 (= ${binary:Version})
+Depends: libofx4 (= ${binary:Version}), ${misc:Depends}
 Architecture: any
 Recommends: libofx-dev
 Description: debugging symbols for libofx4
@@ -50,7 +50,7 @@ Description: debugging symbols for libofx4
 
 Package: libofx-doc
 Section: doc
-Depends: libofx4, libjs-jquery
+Depends: libofx4, libjs-jquery, ${misc:Depends}
 Architecture: all
 Description: documentation for libofx4
  This package provides HTML documentation and sample OFX files for developing
