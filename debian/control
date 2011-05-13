@@ -51,7 +51,7 @@ Description: debugging symbols for libofx4
 Package: libofx-doc
 Section: doc
 Priority: optional
-Depends: libofx4 (= ${binary:Version}), libjs-jquery
+Depends: libofx4, libjs-jquery
 Architecture: all
 Description: documentation for libofx4
  This package provides HTML documentation and sample OFX files for developing
