@@ -3,3 +3,4 @@
 0003-Fix-autoconf-error-due-to-bad-libtool-invocation-in-.patch
 0004-Reference-the-m4-directory-for-macro-files.patch
 0005-Improve-manpage-whatis-entries.patch
+0006-Fix-typo-in-lib-file_preproc.cpp.patch
