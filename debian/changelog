@@ -69,8 +69,11 @@ libofx (1:0.9.4-1) unstable; urgency=low
     common-licenses (lintian fix)
   * debian/libofx-dev.doc-base: Add doc-base registration for libofx-dev HTML
     reference docs
+  * debian/ofx2qif.pod: Add manual page for ofx2qif.
+  * debian/rules: Add build-dep for perl for pod2man (used for ofx2qif manpage
+    generation)
 
- -- Bryan Donlan <bdonlan@gmail.com>  Thu, 12 May 2011 22:54:11 -0400
+ -- Bryan Donlan <bdonlan@gmail.com>  Fri, 13 May 2011 03:40:07 -0400
 
 libofx (1:0.9.0-3) unstable; urgency=low
 
