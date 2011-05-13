@@ -76,6 +76,11 @@ override_dh_clean:
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog NEWS AUTHORS README totest.txt
 
+override_dh_installman:
+	## Generate the ofx2qif manual page now
+	pod2man debian/ofx2qif.pod --section=1 --center="User Commands" > debian/ofx2qif.1
+	dh_installman
+
 # Generate a debug symbols package
 override_dh_strip:
 	dh_strip --dbg-package=libofx4-dbg
