@@ -35,7 +35,7 @@ Description: development package for libofx4
  information and investment tracking.
 
 Package: libofx4-dbg
-Section: libdevel
+Section: debug
 Priority: extra
 Depends: libofx4 (= ${binary:Version})
 Architecture: any
