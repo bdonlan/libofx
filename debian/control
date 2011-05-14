@@ -68,7 +68,6 @@ Description: documentation for libofx4
 Package: ofx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libofx2, libofx1c2, libofx1
 Description: Open Financial Exchange programs
  This package contains programs that implement a primitive interface for
  exchanging financial information using Open Financial Exchange.  More
