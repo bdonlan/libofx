@@ -59,14 +59,17 @@ override_dh_compress:
 
 ## Restore backed-up files on clean
 override_dh_clean:
-	dh_clean
-	
-	for file in $(shell find debian/backup -type f | sed 's|^debian/backup/||'); do \
-		cp debian/backup/$$file $$file -fv; \
-	done
+	if [ -d debian/backup ]; then \
+		for file in $(shell find debian/backup -type f | sed 's|^debian/backup/||'); do \
+			mv debian/backup/$$file $$file -fv; \
+		done; \
+		find debian/backup -type d -delete; \
+	fi
 	rm -f backup-stamp
-	rm -rf debian/backup
 	rm -f m4/lt*.m4 m4/libtool.m4
+	# Must run last, to ensure backup-stamp isn't removed early
+	dh_clean
+
 
 # For some reason, dh_installchangelogs doesn't notice the upstream changelog
 # without this hint. While we're at it, install NEWS, AUTHORS, README, and
