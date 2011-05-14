@@ -7,6 +7,8 @@ Homepage: http://libofx.sourceforge.net/
 Build-Depends: libosp-dev, debhelper (>= 7.0.50), gengetopt, curl,
   libcurl4-gnutls-dev, libxml++2.6-dev, help2man, automake (>= 1.11), autoconf (>= 2.67),
   libtool, perl
+Vcs-Browser: https://github.com/bdonlan/libofx
+Vcs-Git: git://github.com/bdonlan/libofx.git
 
 Package: libofx4
 Architecture: any
