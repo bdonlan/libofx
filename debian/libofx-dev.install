@@ -1,5 +1,4 @@
 usr/lib/*.a
-usr/lib/*.la
 usr/lib/libofx.so
 usr/include
 usr/lib/pkgconfig
