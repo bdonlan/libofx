@@ -18,9 +18,9 @@ to immediately provide something useful, and to give people a reason to try
 the library.  It is not recommended that financial software use the
 output of this utility for OFX support.  The QIF file format is very
 primitive, and much information is lost.  The utility currently supports
-every tansaction tags of the QIF format except the address lines, and supports
+every transaction tags of the QIF format except the address lines, and supports
 many of the !Account tags.  It should generate QIF files that will import 
-sucesfully in just about every software with QIF support.
+successfully in just about every software with QIF support.
 
 =head1 OPTIONS
 
@@ -28,7 +28,7 @@ This program does not accept any command-line options.
 
 =head1 CAVEATS
 
-The libofx maintainer does not plan on improving working this utility much
+The libofx maintainer does not plan on improving this utility much
 further, but contributions and patches are gladly accepted. If you are
 interested in hacking on B<ofx2qif>, links to QIF documentation are available
 on the LibOFX home page.
@@ -57,7 +57,9 @@ This manual page was written for the Debian GNU/Linux distribution because
 the original program does not have a manual page.
 
 This manual page was written by Bryan Donlan <bdonlan@gmail.com>, for
-the Debian GNU/Linux system (but may be used by others).
+the Debian GNU/Linux system (but may be used by others). As portions of this
+manual page are derived from source code comments, this manual page is also
+licensed under the terms above.
 
 =head1 SEE ALSO
 
