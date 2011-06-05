@@ -1,0 +1,16 @@
+*.o
+*.lo
+.libs
+Makefile
+autom4te.cache
+config.h
+config.log
+config.status
+*.la
+libtool
+ofx2qif/ofx2qif
+ofxconnect/ofxconnect
+ofxdump/ofxdump
+stamp-h1
+debian/backup
+debian/*.debhelper.log
