@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Bryan Donlan <bdonlan@gmail.com>
 Standards-Version: 3.9.2.0
 Homepage: http://libofx.sourceforge.net/
-Build-Depends: libosp-dev, debhelper (>= 7.0.50), gengetopt, curl,
+Build-Depends: libosp-dev, debhelper (>= 8.1.3), gengetopt, curl,
   libcurl4-gnutls-dev, libxml++2.6-dev, help2man, automake (>= 1.11), autoconf (>= 2.67),
   libtool, perl
 Vcs-Browser: https://github.com/bdonlan/libofx
@@ -13,7 +13,9 @@ Vcs-Git: git://github.com/bdonlan/libofx.git
 Package: libofx4
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
 Suggests: ofx
+Multi-Arch: same
 Description: library to support the Open Financial Exchange format
  Open Financial Exchange is an open standard for exchanging financial
  information. Using this library a program can enable support for

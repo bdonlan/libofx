@@ -1,4 +1,4 @@
-usr/lib/*.a
-usr/lib/libofx.so
+usr/lib/*/*.a
+usr/lib/*/libofx.so
 usr/include
-usr/lib/pkgconfig
+usr/lib/*/pkgconfig
