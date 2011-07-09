@@ -1,3 +1,34 @@
+libofx (1:0.9.4-2) unstable; urgency=low
+
+  * Multiarch support:
+    * debian/control: Bump debhelper versioned dependency to >= 8.1.3 for
+      compat level 9
+    * debian/control: Set Multi-Arch: same for libofx4
+    * debian/compat: Use debhelper compatibility level 9
+    * debian/source/lintian-overrides: Override
+      package-needs-versioned-debhelper-build-depends warning for experimental
+      debhelper version.
+    * debian/libofx4.install, debian/libofx-dev.install: Install .so files to
+      arch subdirectory
+  * debian/control:
+    * Unversion dependency on libosp-dev
+    * Add Vcs-* tags to debian/control
+    * Remove conflicts from ofx (conflicting versions no longer in any
+      supported debian version)
+  * debian/copyright: Update debian/copyright to clarify maintainership and
+    sort authors
+  * debian/libofx-dev.install: Drop the *.la libtool linker archives from
+    libofx-dev (Closes: #633278)
+  * debian/ofx2qif.pod: Make some spelling/grammar fixes in ofx2qif(1) and
+    clarify copyright
+  * debian/rules:
+    * Remove "sample rules file" comments in debian/rules
+    * Improve safety in backup file restoration process
+  * debian/libofx-doc.doc-base: Fix capitalization in libofx-doc doc-base
+    registration
+
+ -- Bryan Donlan <bdonlan@gmail.com>  Sat, 09 Jul 2011 09:18:07 -0400
+
 libofx (1:0.9.4-1) unstable; urgency=low
 
   * Set myself as maintainer, with blessing of previous maintainer Thomas
